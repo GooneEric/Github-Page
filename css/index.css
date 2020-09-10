@@ -1,0 +1,298 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    /* flexible 给我们划分了 10 等份 */
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: white;
+    padding-bottom: .533333rem;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.woff') format('woff'), url('../onts/icomoon.svg?ug3kvn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+clearfix {
+    *zoom: 1;
+    /*IE6 IE7不支持伪类元素  开启haslayout*/
+}
+
+clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    font-size: .333333rem;
+}
+
+
+/* 这个插件默认的html文字大小 cssroot  16px */
+
+img {
+    width: 10rem;
+    height: 100%;
+}
+
+
+/* 如果我们的屏幕超过了 750px  那么我们就按照 750设计稿来走 不会让我们页面超过750px */
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+
+/* search-content */
+
+table {
+    margin: .4rem auto;
+    width: 9rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: .3rem;
+}
+
+
+/* td {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+} */
+
+table th {
+    padding-top: .106667rem;
+    padding-bottom: .106667rem;
+    text-align: center;
+    font-size: .533333rem;
+}
+
+#t1,
+#t3 {
+    width: 20%;
+}
+
+#t2,
+#t4,
+#t5 {
+    width: 30%;
+}
+
+table .d1 {
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.c1 {
+    padding-top: .2rem;
+    height: .8rem;
+    padding-bottom: .2rem;
+}
+
+.c2 {
+    height: 1.066667rem;
+}
+
+.liuzhuan {
+    margin-top: .9rem;
+    margin-left: .266667rem;
+    font-size: .3rem;
+    color: white;
+    background-color: rgba(80, 159, 207);
+    height: .8rem;
+    width: 2rem;
+    text-align: center;
+    line-height: .8rem;
+    border-top-right-radius: .666667rem;
+    border-bottom-right-radius: .666667rem;
+}
+
+.xueyuan {
+    position: relative;
+    height: 3rem;
+}
+
+.mingzi {
+    position: absolute;
+    top: .2rem;
+    left: .5rem;
+    text-align: center;
+    line-height: 1.2rem;
+    font-size: .35rem;
+    background-color: rgba(85, 151, 238);
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 1.2rem;
+    color: white;
+    font-weight: 400;
+}
+
+.yijian {
+    position: absolute;
+    width: 7.3rem;
+    border: 1px solid rgba(150, 150, 150);
+    top: .5rem;
+    right: 0.5rem;
+    font-size: .25rem;
+    color: rgba(150, 150, 150);
+    height: 2rem
+}
+
+.yijian .p1 {
+    position: absolute;
+    top: 0;
+    left: .266667rem;
+    font-size: .45rem;
+    color: black;
+}
+
+.p3 {
+    position: absolute;
+    bottom: 0;
+    right: .8rem;
+}
+
+.p2 {
+    position: absolute;
+    bottom: .4rem;
+    right: .8rem;
+}
+
+
+/* .p4 {
+    width: 0;
+    height: 0;
+    border: 1px solid rgba(150, 150, 150);
+    /* border-style: solid;
+    border-width: 10px; */
+
+
+/* border-color: transparent transparent transparent red;
+    font-size: 0;
+    line-height: 0;
+}  */
+
+.xueyuan:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: relative;
+    top: .7rem;
+    left: 1.95rem;
+    border-right: .2rem solid rgba(150, 150, 150);
+    border-top: .133333rem solid transparent;
+    border-bottom: .133333rem solid transparent;
+}
+
+.xueyuan:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: relative;
+    top: .44rem;
+    left: 2rem;
+    border-right: .2rem solid white;
+    border-top: .133333rem solid transparent;
+    border-bottom: .133333rem solid transparent;
+}
+
+.p4 {
+    font-family: 'icomoon';
+    font-size: .533333rem;
+    position: absolute;
+    bottom: 0;
+    right: .2rem;
+}
+
+.big {
+    position: relative;
+}
+
+.xian {
+    position: absolute;
+    top: .666667rem;
+    left: .6rem;
+    height: 12rem;
+    width: .533333rem;
+    border-right: .013333rem solid rgba(150, 150, 150);
+}
+
+.qianming {
+    /* padding-top: -.133333rem; */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: 1.5rem;
+    line-height: 1rem;
+    width: 100%;
+    background-color: rgba(243, 243, 243);
+}
+
+.qianming1 {
+    height: 0.8rem;
+}
+
+.qianming input {
+    position: absolute;
+    left: .133333rem;
+    top: .133333rem;
+    width: 6.2rem;
+    font-family: 'icomoon';
+    line-height: .9rem;
+    height: .9rem;
+    font-size: 0.4rem;
+    color: rgba(150, 150, 150);
+    border: 1px solid rgba(150, 150, 150);
+    border-radius: .106667rem;
+}
+
+.qianming .tijiao {
+    font-size: 400;
+    position: absolute;
+    left: 6.7rem;
+    top: .133333rem;
+    width: 2.1rem;
+    color: white;
+    line-height: .9rem;
+    height: .9rem;
+    font-size: 0.4rem;
+    background-color: rgba(0, 124, 255);
+    outline: none;
+    border-radius: .106667rem;
+}
+
+.qianming .dian {
+    position: absolute;
+    left: 9.1rem;
+    top: .133333rem;
+    width: 0.8rem;
+    line-height: .8rem;
+    height: .8rem;
+    font-family: 'icomoon';
+    font-size: .5rem;
+    border: 1px solid rgba(150, 150, 150);
+    border-radius: .8rem;
+    background-color: white;
+    color: rgba(150, 150, 150);
+}
+
+.tap {
+    border: none;
+    outline: none;
+}
+
+a {
+    color: white;
+    font-size: .43rem;
+}

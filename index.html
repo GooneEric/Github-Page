@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/normolize.css">
+
+    <title>&lrm; </title>
+</head>
+
+<body>
+    <img src="images/3.jpeg" alt>
+    <!-- <div>
+        <span>×</span>
+        <span>...</span>
+    </div>
+    <div>研究生疫情期间请假申请</div> -->
+    <!-- <div>
+        <table>
+            <tr>
+                <td>表单</td>
+                <td>流程图</td>
+                <td>状态</td>
+            </tr>
+        </table>
+    </div> -->
+
+
+    <table border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <th colspan="4">
+                疫情防控期间学生出入证
+            </th>
+
+        </thead>
+        <tbody>
+            <tr class="c1">
+                <td id="t1">姓名</td>
+                <td id="t2"><input class=" tap" type="text" id="t5" value="吴青"></td>
+                <td id="t3">学院</td>
+                <td id="t4">机械工程学院</td>
+            </tr>
+            <tr class="c1">
+                <td id="t1">学号</td>
+                <td id="t2"><input type="text" class=" tap" value="2211803001"></td>
+                <td id="t3">外出类型</td>
+                <td id="t4">临时外出（当日返校且不离开镇江）</td>
+            </tr>
+            <tr class="c1">
+                <td id="t1">陪同老师工号</td>
+                <td id="t2">1000002341</td>
+                <td id="t3">陪同老师</td>
+                <td id="t4">宋寿鹏</td>
+            </tr>
+            <tr class="c1">
+                <td id="t1">请假出校日期</td>
+                <td id="t2"><span id="today1"></span>&nbsp;&nbsp;09:00</td>
+                <td id="t3">请假返校日期</td>
+                <td id="t4"><span id="today2"></span>&nbsp;&nbsp;20:12</td>
+            </tr>
+            <tr class="c2">
+                <td id="t1">辅导员意见</td>
+                <td colspan="3" class="d1">同意<br>&emsp;&emsp;&emsp;&emsp;------------工业中心/洪亚杰&nbsp;<span id="zuotian1"></span> 10:35:06
+                </td>
+
+            </tr>
+            <tr class="c2">
+                <td id="t1">导师意见</td>
+                <td colspan="3" class="d1">同意<br>&emsp;&emsp;&emsp;&emsp;------------机械工程学院/宋寿鹏&nbsp;<span id="zuotian2"></span> 10:38:06
+                </td>
+
+            </tr>
+            <tr class="c2">
+                <td id="t1">学院意见</td>
+                <td colspan="3" class="d1">同意<br>&emsp;&emsp;&emsp;&emsp;------------机械工程学院/张黎明&nbsp;<span id="zuotian3"></span> 11:40:06
+                </td>
+
+            </tr>
+        </tbody>
+
+
+    </table>
+    <div class="big">
+        <div class="xian"></div>
+        <div class="liuzhuan">
+            流转意见
+        </div>
+        <div class="xueyuan">
+            <div class="mingzi">张黎明</div>
+            <div class="yijian">
+                <p class="p1">同意</p>
+                <p class="p2">张黎明</p>
+                <p class="p3">批准于<span id="zuotian4"></span> 11:40:06</p>
+                <span class="p4"></span>
+            </div>
+
+        </div>
+        <div class="xueyuan">
+            <div class="mingzi">宋寿鹏</div>
+            <div class="yijian">
+                <p class="p1">同意</p>
+                <p class="p2">宋寿鹏</p>
+                <p class="p3">批准于<span id="zuotian5"></span> 10:38:06</p>
+                <span class="p4"></span>
+            </div>
+
+        </div>
+        <div class="xueyuan">
+            <div class="mingzi">洪亚杰</div>
+            <div class="yijian">
+                <p class="p1">同意</p>
+                <p class="p2">洪亚杰</p>
+                <p class="p3">批准于<span id="zuotian6"></span> 10:35:06</p>
+                <span class="p4"></span>
+            </div>
+
+        </div>
+        <div class="xueyuan">
+            <div class="mingzi" id="z1"></div>
+            <div class="yijian">
+                <p class="p1">同意</p>
+                <p class="p2" id="z2"></p>
+                <p class="p3">批准于<span id="zuotian7"></span> 10:30:06</p>
+                <span class="p4"></span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="qianming1">
+    </div>
+    <div class="qianming">
+        <input type="text" value="&nbsp;&nbsp;请签批">
+        <span class="tijiao"><a href="2.html">提 交</a></span>
+        <span class="dian"></span>
+    </div>
+
+
+    <script>
+        var dateTime = new Date();
+        today_time = dateTime.getFullYear() + '-' + (Array(2).join(0) + (dateTime.getMonth() + 1)).slice(-2) + '-' + (Array(2).join(0) + dateTime.getDate()).slice(-2);
+        // console.log(today_time);
+        yestoday_time = dateTime.getFullYear() + '-' + (Array(2).join(0) + (dateTime.getMonth() + 1)).slice(-2) + '-' + (Array(2).join(0) + (dateTime.getDate() - 1)).slice(-2);
+        // console.log(yestoday_time);
+        var today1 = document.getElementById('today1');
+        var yestoday1 = document.getElementById('zuotian1');
+        today1.innerText = today_time;
+        yestoday1.innerText = yestoday_time;
+        var today2 = document.getElementById('today2');
+        var yestoday2 = document.getElementById('zuotian2');
+        today2.innerText = today_time;
+        yestoday2.innerText = yestoday_time;
+        var yestoday3 = document.getElementById('zuotian3');
+        yestoday3.innerText = yestoday_time;
+        var yestoday4 = document.getElementById('zuotian4');
+        yestoday4.innerText = yestoday_time;
+        var yestoday5 = document.getElementById('zuotian5');
+        yestoday5.innerText = yestoday_time;
+        var yestoday6 = document.getElementById('zuotian6');
+        yestoday6.innerText = yestoday_time;
+        var yestoday7 = document.getElementById('zuotian7');
+        yestoday7.innerText = yestoday_time;
+        var name1 = document.getElementById('t5');
+        var real1 = document.getElementById('z1');
+        var real2 = document.getElementById('z2');
+        name1.oninput = function() {
+            real1.innerText = name1.value;
+            real2.innerText = name1.value;
+        }
+    </script>
+
+
+</body>
+
+</html>
