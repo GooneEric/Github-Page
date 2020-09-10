@@ -76,13 +76,18 @@ table th {
     font-size: .533333rem;
 }
 
-#t1,
-#t3 {
+#t1 {
     width: 20%;
 }
-
-#t2,
-#t4,
+#t2 {
+    width: 30%;
+}
+#t3 {
+    width: 20%;
+}  
+#t4 {
+    width: 30%;
+}
 #t5 {
     width: 30%;
 }
